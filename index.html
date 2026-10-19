@@ -353,21 +353,25 @@
         </div>
     </footer>
 
-    <!-- Modal Puntos de Venta (Con Mapa Interactivo Dinámico) -->
-    <div id="modal-puntos" class="fixed inset-0 z-[100] hidden bg-slate-900/40 overflow-y-auto h-full w-full flex items-center justify-center transition-opacity duration-200 opacity-0">
-        <div class="relative bg-white rounded-2xl shadow-2xl p-8 w-full max-w-4xl mx-4 transform scale-95 transition-transform duration-200" id="modal-content">
-            <button id="close-modal" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 transition-colors">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-            </button>
-            <h3 class="text-2xl font-bold text-slate-800 mb-6 border-b pb-4">Nuestros Puntos de Venta</h3>
+    <!-- Modal Puntos de Venta (Estructura Mobile Optimizada) -->
+    <div id="modal-puntos" class="fixed inset-0 z-[100] hidden bg-slate-900/40 overflow-y-auto h-full w-full flex items-center justify-center transition-opacity duration-200 opacity-0 px-3 py-6 sm:px-0">
+        <div class="relative bg-white rounded-2xl shadow-2xl p-5 sm:p-8 w-full max-w-4xl mx-auto transform scale-95 transition-transform duration-200 max-h-[90vh] flex flex-col" id="modal-content">
             
-            <div class="grid md:grid-cols-2 gap-8 mb-6">
+            <!-- Cabecera del Modal (No se corta el título) -->
+            <div class="flex justify-between items-start mb-4 sm:mb-6 border-b pb-3 sm:pb-4 shrink-0">
+                <h3 class="text-xl sm:text-2xl font-bold text-slate-800 pr-4">Nuestros Puntos de Venta</h3>
+                <button id="close-modal" class="text-slate-400 hover:text-slate-600 transition-colors bg-slate-50 hover:bg-slate-100 rounded-full p-1.5 flex-shrink-0">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+            
+            <!-- Cuerpo scrolleable del Modal -->
+            <div class="grid md:grid-cols-2 gap-5 sm:gap-8 overflow-y-auto custom-scrollbar pr-1 pb-2">
                 <!-- Botones interactivos de sucursales -->
-                <div class="space-y-4 max-h-[400px] overflow-y-auto pr-2 custom-scrollbar">
+                <div class="space-y-4">
                     
                     <div>
                         <h4 class="font-bold text-slate-400 uppercase text-xs tracking-wider mb-2">Punto Principal</h4>
-                        <!-- Formato de embed estandarizado para evitar bloqueos -->
                         <button class="map-location-btn w-full text-left p-4 rounded-xl border-2 border-sky-300 bg-sky-50 text-slate-700 transition-colors duration-150" 
                                 data-embed="https://maps.google.com/maps?q=Vivo+Outlet+Peñuelas,+La+Serena&t=&z=15&ie=UTF8&iwloc=&output=embed" 
                                 data-link="https://maps.app.goo.gl/6ixZxsge5sxkV8Tc7">
@@ -414,8 +418,8 @@
 
                 </div>
                 
-                <!-- Mapa Interactivo (Google Maps Iframe Dinámico - Sin transiciones CSS que causen lag) -->
-                <div class="rounded-xl overflow-hidden border border-slate-200 shadow-inner flex flex-col bg-slate-100 min-h-[350px] relative">
+                <!-- Mapa Interactivo Dinámico -->
+                <div class="rounded-xl overflow-hidden border border-slate-200 shadow-inner flex flex-col bg-slate-100 min-h-[250px] sm:min-h-[350px] h-[300px] md:h-auto relative">
                     <iframe 
                         id="modal-map-iframe"
                         src="https://maps.google.com/maps?q=Vivo+Outlet+Peñuelas,+La+Serena&t=&z=15&ie=UTF8&iwloc=&output=embed" 
@@ -428,11 +432,12 @@
                 </div>
             </div>
             
-            <div class="mt-6 pt-4 border-t flex justify-end gap-4">
-                <a href="https://maps.app.goo.gl/6ixZxsge5sxkV8Tc7" id="modal-map-link" target="_blank" class="text-sky-600 px-4 py-2 rounded-lg font-medium hover:bg-sky-50 transition-colors flex items-center">
+            <!-- Footer de botones fijos abajo -->
+            <div class="mt-4 sm:mt-6 pt-4 border-t flex flex-col sm:flex-row justify-end gap-3 shrink-0">
+                <a href="https://maps.app.goo.gl/6ixZxsge5sxkV8Tc7" id="modal-map-link" target="_blank" class="w-full sm:w-auto text-center text-sky-600 px-4 py-2.5 rounded-lg font-medium hover:bg-sky-50 transition-colors border border-sky-200 sm:border-transparent">
                     🗺️ Abrir en la app de Maps
                 </a>
-                <button class="bg-sky-100 text-sky-600 px-6 py-2 rounded-lg font-medium hover:bg-sky-200 transition-colors" onclick="document.getElementById('close-modal').click()">Cerrar</button>
+                <button class="w-full sm:w-auto bg-sky-100 text-sky-600 px-6 py-2.5 rounded-lg font-medium hover:bg-sky-200 transition-colors" onclick="document.getElementById('close-modal').click()">Cerrar</button>
             </div>
         </div>
     </div>
@@ -479,14 +484,14 @@
                 setTimeout(() => {
                     modal.classList.remove('opacity-0');
                     modalContent.classList.remove('scale-95');
-                }, 10); // Reducido para mayor velocidad
+                }, 10);
             };
 
             // Cerrar modal
             const closeModal = () => {
                 modal.classList.add('opacity-0');
                 modalContent.classList.add('scale-95');
-                setTimeout(() => modal.classList.add('hidden'), 200); // Transición más rápida
+                setTimeout(() => modal.classList.add('hidden'), 200);
             };
 
             btnsOpenModal.forEach(btn => {
@@ -499,7 +504,7 @@
             if (btnCloseModal) btnCloseModal.addEventListener('click', closeModal);
             if (modal) modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
 
-            // Lógica de botones de ubicaciones (sin animaciones de opacidad que causen lag)
+            // Lógica de botones de ubicaciones
             mapLocationBtns.forEach(btn => {
                 btn.addEventListener('click', function() {
                     mapLocationBtns.forEach(b => {
@@ -510,7 +515,7 @@
                     this.classList.remove('border-transparent', 'hover:bg-slate-50');
                     this.classList.add('bg-sky-50', 'border-sky-300');
 
-                    // Cambiar source solo si es distinto para evitar recargas fantasma
+                    // Cambiar source solo si es distinto
                     const newSrc = this.getAttribute('data-embed');
                     if (mapIframe.src !== newSrc) {
                         mapIframe.src = newSrc;
