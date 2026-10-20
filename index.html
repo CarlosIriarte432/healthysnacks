@@ -107,7 +107,7 @@
         </div>
     </section>
 
-    <!-- 1.5. Nuestros Productos (SLIDER) -->
+    <!-- 1.5. Nuestros Productos (SLIDER con tarjetas clicables) -->
     <section id="productos" class="py-24 bg-white border-t border-slate-100 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
             <div class="text-center mb-16 animate-on-load">
@@ -115,7 +115,7 @@
                     Calidad y Sabor
                 </div>
                 <h2 class="text-4xl font-extrabold text-slate-900">Nuestros Productos</h2>
-                <p class="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">Elaborados con ingredientes seleccionados para nutrir tu cuerpo sin sacrificar el sabor.</p>
+                <p class="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">Elaborados con ingredientes seleccionados para nutrir tu cuerpo sin sacrificar el sabor. Haz clic en cualquiera para pedirlo.</p>
             </div>
             
             <div class="relative group animate-on-load delay-100">
@@ -124,76 +124,97 @@
                 </button>
 
                 <div id="slider-productos" class="flex overflow-x-auto pb-8 hide-scrollbar snap-x snap-mandatory gap-6 scroll-smooth">
-                    <!-- Producto 1 -->
-                    <div class="flex-none w-72 md:w-80 snap-center">
-                        <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 h-full flex flex-col group/card">
+                    
+                    <!-- Producto 1: Barras -->
+                    <a href="https://wa.me/56957069506?text=Hola%2C%20estoy%20interesado%20en%20comprar%20Barras%20Proteicas" target="_blank" class="flex-none w-72 md:w-80 snap-center group/card cursor-pointer">
+                        <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-xl hover:border-sky-300 transition-all duration-300 h-full flex flex-col">
                             <div class="h-72 w-full overflow-hidden relative bg-sky-100">
                                 <img src="src/barras.jpg" alt="Barras Proteicas" class="w-full h-full object-cover group-hover/card:scale-110 transition-transform duration-700">
+                                <div class="absolute inset-0 bg-sky-900/0 group-hover/card:bg-sky-900/10 transition-colors flex items-end justify-end p-4">
+                                    <span class="bg-white/90 text-sky-600 text-xs font-bold px-3 py-1.5 rounded-full shadow-sm opacity-0 group-hover/card:opacity-100 transition-opacity">Pedir por WhatsApp 💬</span>
+                                </div>
                             </div>
                             <div class="p-6 flex-grow flex flex-col justify-between">
                                 <div>
-                                    <h3 class="text-xl font-bold text-slate-800 mb-2">Barras Proteicas</h3>
+                                    <h3 class="text-xl font-bold text-slate-800 mb-2 group-hover/card:text-sky-500 transition-colors">Barras Proteicas</h3>
                                     <p class="text-slate-500 text-sm">Línea Whey, Vegana y Sin Gluten. El snack perfecto on-the-go.</p>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- Producto 2 -->
-                    <div class="flex-none w-72 md:w-80 snap-center">
-                        <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 h-full flex flex-col group/card">
+                    </a>
+
+                    <!-- Producto 2: Bombones -->
+                    <a href="https://wa.me/56957069506?text=Hola%2C%20estoy%20interesado%20en%20comprar%20Bombones%20Saludables" target="_blank" class="flex-none w-72 md:w-80 snap-center group/card cursor-pointer">
+                        <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-xl hover:border-sky-300 transition-all duration-300 h-full flex flex-col">
                             <div class="h-72 w-full overflow-hidden relative bg-sky-100">
                                 <img src="src/bombones.jpg" alt="Bombones" class="w-full h-full object-cover group-hover/card:scale-110 transition-transform duration-700">
+                                <div class="absolute inset-0 bg-sky-900/0 group-hover/card:bg-sky-900/10 transition-colors flex items-end justify-end p-4">
+                                    <span class="bg-white/90 text-sky-600 text-xs font-bold px-3 py-1.5 rounded-full shadow-sm opacity-0 group-hover/card:opacity-100 transition-opacity">Pedir por WhatsApp 💬</span>
+                                </div>
                             </div>
                             <div class="p-6 flex-grow flex flex-col justify-between">
                                 <div>
-                                    <h3 class="text-xl font-bold text-slate-800 mb-2">Bombones Saludables</h3>
+                                    <h3 class="text-xl font-bold text-slate-800 mb-2 group-hover/card:text-sky-500 transition-colors">Bombones Saludables</h3>
                                     <p class="text-slate-500 text-sm">Prestigio, Healthyboom, Frutos Secos, Proteinballs y Cocadas.</p>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- Producto 3 -->
-                    <div class="flex-none w-72 md:w-80 snap-center">
-                        <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 h-full flex flex-col group/card">
+                    </a>
+
+                    <!-- Producto 3: Bowls -->
+                    <a href="https://wa.me/56957069506?text=Hola%2C%20estoy%20interesado%20en%20comprar%20Bowls%20Nutritivos" target="_blank" class="flex-none w-72 md:w-80 snap-center group/card cursor-pointer">
+                        <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-xl hover:border-sky-300 transition-all duration-300 h-full flex flex-col">
                             <div class="h-72 w-full overflow-hidden relative bg-sky-100">
                                 <img src="src/bowls.jpg" alt="Bowls" class="w-full h-full object-cover group-hover/card:scale-110 transition-transform duration-700">
+                                <div class="absolute inset-0 bg-sky-900/0 group-hover/card:bg-sky-900/10 transition-colors flex items-end justify-end p-4">
+                                    <span class="bg-white/90 text-sky-600 text-xs font-bold px-3 py-1.5 rounded-full shadow-sm opacity-0 group-hover/card:opacity-100 transition-opacity">Pedir por WhatsApp 💬</span>
+                                </div>
                             </div>
                             <div class="p-6 flex-grow flex flex-col justify-between">
                                 <div>
-                                    <h3 class="text-xl font-bold text-slate-800 mb-2">Bowls Nutritivos</h3>
+                                    <h3 class="text-xl font-bold text-slate-800 mb-2 group-hover/card:text-sky-500 transition-colors">Bowls Nutritivos</h3>
                                     <p class="text-slate-500 text-sm">Base, Proteína, Verduras, Grasa Saludable y Fruta fresca.</p>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- Producto 4 -->
-                    <div class="flex-none w-72 md:w-80 snap-center">
-                        <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 h-full flex flex-col group/card">
+                    </a>
+
+                    <!-- Producto 4: Helados -->
+                    <a href="https://wa.me/56957069506?text=Hola%2C%20estoy%20interesado%20en%20comprar%20Helados%20Proteicos" target="_blank" class="flex-none w-72 md:w-80 snap-center group/card cursor-pointer">
+                        <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-xl hover:border-sky-300 transition-all duration-300 h-full flex flex-col">
                             <div class="h-72 w-full overflow-hidden relative bg-sky-100">
                                 <img src="src/helados.jpg" alt="Helados Proteicos" class="w-full h-full object-cover group-hover/card:scale-110 transition-transform duration-700">
+                                <div class="absolute inset-0 bg-sky-900/0 group-hover/card:bg-sky-900/10 transition-colors flex items-end justify-end p-4">
+                                    <span class="bg-white/90 text-sky-600 text-xs font-bold px-3 py-1.5 rounded-full shadow-sm opacity-0 group-hover/card:opacity-100 transition-opacity">Pedir por WhatsApp 💬</span>
+                                </div>
                             </div>
                             <div class="p-6 flex-grow flex flex-col justify-between">
                                 <div>
-                                    <h3 class="text-xl font-bold text-slate-800 mb-2">Helados Proteicos</h3>
+                                    <h3 class="text-xl font-bold text-slate-800 mb-2 group-hover/card:text-sky-500 transition-colors">Helados Proteicos</h3>
                                     <p class="text-slate-500 text-sm">Chocolate, cookies and cream, frutilla y capuchino.</p>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- Producto 5 -->
-                    <div class="flex-none w-72 md:w-80 snap-center">
-                        <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 h-full flex flex-col group/card">
+                    </a>
+
+                    <!-- Producto 5: Batidos -->
+                    <a href="https://wa.me/56957069506?text=Hola%2C%20estoy%20interesado%20en%20comprar%20Batidos%20Funcionales" target="_blank" class="flex-none w-72 md:w-80 snap-center group/card cursor-pointer">
+                        <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-xl hover:border-sky-300 transition-all duration-300 h-full flex flex-col">
                             <div class="h-72 w-full overflow-hidden relative bg-sky-100">
                                 <img src="src/batidos.jpg" alt="Batidos" class="w-full h-full object-cover group-hover/card:scale-110 transition-transform duration-700">
+                                <div class="absolute inset-0 bg-sky-900/0 group-hover/card:bg-sky-900/10 transition-colors flex items-end justify-end p-4">
+                                    <span class="bg-white/90 text-sky-600 text-xs font-bold px-3 py-1.5 rounded-full shadow-sm opacity-0 group-hover/card:opacity-100 transition-opacity">Pedir por WhatsApp 💬</span>
+                                </div>
                             </div>
                             <div class="p-6 flex-grow flex flex-col justify-between">
                                 <div>
-                                    <h3 class="text-xl font-bold text-slate-800 mb-2">Batidos Funcionales</h3>
+                                    <h3 class="text-xl font-bold text-slate-800 mb-2 group-hover/card:text-sky-500 transition-colors">Batidos Funcionales</h3>
                                     <p class="text-slate-500 text-sm">Cookies and cream y capuchino estilo frappe.</p>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
+
                 </div>
 
                 <button id="btn-next-productos" class="absolute right-0 top-1/2 -translate-y-1/2 -mr-4 md:-mr-6 z-20 bg-white w-12 h-12 rounded-full shadow-lg border border-slate-100 flex items-center justify-center text-sky-500 hover:bg-sky-500 hover:text-white transition-all opacity-0 group-hover:opacity-100 focus:opacity-100 pointer-events-auto cursor-pointer">
@@ -299,7 +320,7 @@
         </div>
     </section>
 
-    <!-- 4. Eventos (Con fotos de comida/eventos reales de ejemplo) -->
+    <!-- 4. Eventos -->
     <section id="eventos" class="py-24 bg-slate-900 text-white relative overflow-hidden">
         <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-sky-500 rounded-full mix-blend-screen filter blur-[120px] opacity-10 pointer-events-none"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
@@ -310,25 +331,21 @@
             <p class="text-slate-300 mb-14 max-w-2xl mx-auto text-lg">Explora nuestro portafolio. Llevamos nuestro servicio de alimentación directamente a tu celebración, feria o encuentro corporativo con un montaje impecable.</p>
             
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-                <!-- Evento 1: Catering Corporativo -->
                 <div class="bg-slate-800 h-56 rounded-2xl flex items-center justify-center border border-slate-700 hover:border-sky-400 hover:shadow-[0_0_20px_rgba(56,189,248,0.3)] hover:-translate-y-2 transition-all duration-300 cursor-pointer group overflow-hidden relative">
                     <img src="https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=600&q=80" alt="Catering Corporativo" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-70 group-hover:opacity-100">
                     <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-80"></div>
                     <span class="text-sm font-semibold text-white tracking-wide absolute bottom-4 z-10 bg-slate-900/60 px-3 py-1 rounded-full backdrop-blur-sm">Catering Corporativo</span>
                 </div>
-                <!-- Evento 2: Ferias y Stands -->
                 <div class="bg-slate-800 h-56 rounded-2xl flex items-center justify-center border border-slate-700 hover:border-sky-400 hover:shadow-[0_0_20px_rgba(56,189,248,0.3)] hover:-translate-y-2 transition-all duration-300 cursor-pointer group overflow-hidden relative">
                     <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=600&q=80" alt="Ferias y Stands" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-70 group-hover:opacity-100">
                     <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-80"></div>
                     <span class="text-sm font-semibold text-white tracking-wide absolute bottom-4 z-10 bg-slate-900/60 px-3 py-1 rounded-full backdrop-blur-sm">Ferias y Stands</span>
                 </div>
-                <!-- Evento 3: Coffee Break -->
                 <div class="bg-slate-800 h-56 rounded-2xl flex items-center justify-center border border-slate-700 hover:border-sky-400 hover:shadow-[0_0_20px_rgba(56,189,248,0.3)] hover:-translate-y-2 transition-all duration-300 cursor-pointer group overflow-hidden relative">
-                    <img src="src/evento3.jpg" alt="Coffee Break" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-70 group-hover:opacity-100">
+                    <img src="https://images.unsplash.com/photo-1465847899084-d164df4dedc6?auto=format&fit=crop&w=600&q=80" alt="Coffee Break" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-70 group-hover:opacity-100">
                     <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-80"></div>
                     <span class="text-sm font-semibold text-white tracking-wide absolute bottom-4 z-10 bg-slate-900/60 px-3 py-1 rounded-full backdrop-blur-sm">Coffee Break</span>
                 </div>
-                <!-- Evento 4: Celebraciones -->
                 <div class="bg-slate-800 h-56 rounded-2xl flex items-center justify-center border border-slate-700 hover:border-sky-400 hover:shadow-[0_0_20px_rgba(56,189,248,0.3)] hover:-translate-y-2 transition-all duration-300 cursor-pointer group overflow-hidden relative">
                     <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=600&q=80" alt="Celebraciones" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-70 group-hover:opacity-100">
                     <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-80"></div>
@@ -342,7 +359,7 @@
         </div>
     </section>
 
-    <!-- Footer Simple con Logos de RRSS Grandes -->
+    <!-- Footer Simple -->
     <footer id="contacto" class="bg-white py-12 border-t border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center text-slate-500 text-sm">
             <div class="mb-6 md:mb-0 text-center md:text-left">
